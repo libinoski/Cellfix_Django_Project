@@ -1,0 +1,73 @@
+{% extends 'mobile/customerbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<head>
+  <style media="screen">
+    input[type=text], select,input[type=number] , textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+
+  </style>
+
+
+</head>
+
+
+
+<br><br><br><br><br>
+<h1 style="text-align:center;">MAKE REQUEST</h1>
+<div>
+  <form method="post" style="margin-left:200px;margin-right:200px;">
+      {% csrf_token %}
+    <label for="category">Mobile category</label>
+    {% render_field enquiry.category class="form-control"  %}<br>
+
+    <label for="mobile_no">IMEI number</label>
+    <input type="text" name="mobile_no" class="form-control" placeholder="IMEI Number" pattern="\d{15}" title="IMEI NUMBER CONSIST OF 15 NUMBERS" required>
+
+
+    <label for="mobile_name">Mobile name</label>
+    {% render_field enquiry.mobile_name class="form-control" placeholder="mobile Name" %}
+    <label for="mobile_brand">Mobile brand</label>
+    {% render_field enquiry.mobile_brand class="form-control" placeholder="mobile Brand" %}
+
+    <label for="mobile_model">Mobile model</label>
+    {% render_field enquiry.mobile_model class="form-control" placeholder="mobile Model" %}
+
+    <label for="problem_description">Problem description</label>
+  
+    {% render_field enquiry.problem_description class="form-control" placeholder="Problem Description" %}
+    
+
+
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock content %}

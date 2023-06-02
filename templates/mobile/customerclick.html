@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style media="screen">
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .jumbotron {
+      text-align: center;
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: auto;
+      width: 100%;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  {% include "mobile/navbar.html" %}
+  <br><br><br><br>
+  <div class="jumbotron">
+    <h1 class="display-4">Hello dear customer</h1>
+    <p class="lead">WELCOME TO CELLFIXONLINE</p>
+    <hr class="my-4">
+    <p>You can access various features after Login.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="customersignup" role="button">CREATE YOUR ACCOUNT</a>
+      <a class="btn btn-primary btn-lg" href="customerlogin" role="button">LOGIN</a>
+    </p>
+  </div>
+  <br><br><br>
+  <div class="footer">
+    {% include "mobile/footer.html" %}
+  </div>
+  
+</body>
+
+</html>

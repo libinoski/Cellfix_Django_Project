@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+{% extends 'mobile/mechanicbase.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style media="screen">
+    img{
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .center {
+      margin: auto;
+      width: 80%;
+      max-width: 600px;
+      text-align: center;
+    }
+    .w3-panel {
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .w3-text-black {
+      color: #000080;
+      text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    }
+    .button {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #000000;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 20px;
+      padding: 10px 20px;
+      width: 200px;
+      transition: all 0.3s;
+      cursor: pointer;
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .button:hover {
+      background-color: #e64215;
+    }
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.3s;
+    }
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.3s;
+    }
+    .button:hover span {
+      padding-right: 25px;
+    }
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+  </style>
+</head>
+<body style="background-color:  #E6E6FA;">
+  <br><br><br>
+  <div class="center">
+    <img style="width:200px; height:200px; margin: 20px;" src="{% static mechanic.profile_pic.url %}" alt="">
+    <div class="w3-panel w3-black">
+      <h3 class="w3-text-orange"><b>Name:</b> {{ mechanic }}</h3>
+      <h3 class="w3-text-orange"><b>Mobile:</b> {{ mechanic.mobile }}</h3>
+      <h3 class="w3-text-orange"><b>Skill:</b> {{ mechanic.skill }}</h3>
+      <h3 class="w3-text-orange"><b>Address:</b> {{ mechanic.address }}</h3>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="/edit-mechanic-profile">
+      <button class="button">
+        <span>EDIT PROFILE</span>
+      </button>
+    </a>
+  </div>
+</body>
+{% endblock content %}
+
+
+

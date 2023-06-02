@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    .jumbotron h1 {
+      text-align: center;
+    }
+    .alert {
+      margin: 0px;
+    }
+    /* Add this style to align the text inside the body */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    /* Align the home button in the center */
+    .home-button {
+      text-align: center;
+    }
+  </style>
+  <title></title>
+</head>
+<body>
+  {% include "mobile/navbar.html" %}
+  <br><br>
+  <!-- Wrap the content inside a container div -->
+  <div class="container">
+    <center>
+      <h3 class='alert alert-success' style="margin-bottom:0px;">About Us !</h3>
+    </center>
+    <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+      <h1 class="display-4">WELCOME TO CELLFIX ONILE</h1>
+      <hr class="my-4">
+      <p>Welcome to our Online Smartphone Repair Management System!
+        At our online platform, we offer a cutting-edge solution for managing smartphone repairs with utmost convenience. Our system is designed to streamline the entire repair process, ensuring a hassle-free experience for both customers and repair professionals.
+        Effortless Repair Requests:
+        With our user-friendly interface, customers can easily submit repair requests online. Simply provide details about your device and the issues you're facing, and our system will guide you through the process step-by-step. No more waiting in long queues or dealing with tedious paperwork. Submit a repair request from the comfort of your own home and let us take care of the rest.
+        Transparent Repair Tracking:
+        We understand the importance of staying updated on the progress of your repair. Our system provides real-time tracking, allowing you to monitor the status of your repair at any time. Know exactly when your device reaches our repair center, when the repair process begins, and when it's ready for pickup or delivery. We keep you informed every step of the way.
+        Skilled and Certified Technicians:
+        Rest assured that your smartphone is in capable hands. Our platform connects you with a network of skilled and certified technicians who specialize in various smartphone models and brands. Our technicians have the expertise to diagnose and resolve a wide range of issues, ensuring that your device receives the highest quality of service.
+        Transparent Pricing:
+        We believe in transparency when it comes to pricing. Our system provides clear and detailed cost breakdowns for each repair service. You'll know exactly what you're paying for, with no hidden charges or surprises. We strive to offer competitive and fair pricing, providing value for your money.
+        Secure Data Protection:
+        We prioritize the security and privacy of your personal data. Our system implements robust security measures to safeguard your information throughout the repair process. You can trust us to handle your device and data with the utmost care and confidentiality.
+        Easy Appointment Scheduling:
+        To provide a seamless experience, we offer convenient appointment scheduling options. Choose a date and time that works best for you, and we'll ensure that a technician is available to handle your repair promptly. No more waiting for long periods or uncertain timelines. We value your time and strive to deliver efficient service.
+        Customer Support:
+        We are committed to delivering excellent customer support. Our dedicated support team is available to assist you with any queries or concerns you may have. Whether you need assistance with the repair process, pricing information, or tracking your repair, we're here to help. Reach out to us via phone, email, or our online chat support.
+        Join our Online Smartphone Repair Management System today and experience a new level of convenience and efficiency. Let us take care of your smartphone repair needs while you sit back and enjoy a seamless experience from start to finish.
+      </p>
+      <p class="lead home-button">
+        <a class="btn btn-primary btn-lg" href="/" role="button">HOME</a>
+      </p>
+    </div>
+  </div> <!-- End of container div -->
+  <br><br><br>
+  {% include "mobile/footer.html" %}
+</body>
+</html>

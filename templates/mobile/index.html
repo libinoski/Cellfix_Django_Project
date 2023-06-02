@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background: linear-gradient(45deg, #00ff00, #00b300);
+      padding: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .jumbotron:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+      font-size: 36px;
+      color: white;
+    }
+
+    .jumbotron p {
+      text-align: center;
+      font-size: 18px;
+      color: white;
+    }
+
+    .card {
+      margin: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .services-heading {
+      text-align: center;
+      font-size: 36px; /* Updated font size */
+      margin-top: 60px; /* Increased margin-top for more space */
+      margin-bottom: 20px; /* Adjusted margin-bottom */
+    }
+
+    .services-description {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 60px; /* Increased margin-bottom for more space */
+    }
+
+    .why-choose-us {
+      margin-top: 60px; /* Increased margin-top for more space */
+      text-align: center;
+    }
+
+    .why-choose-us h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .why-choose-us ul {
+      text-align: left;
+      margin-left: 20%; /* Adjusted margin-left */
+    }
+
+    .why-choose-us ul li {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .feature-box {
+      padding: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .feature-box:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .feature-box:nth-child(odd) {
+      background: linear-gradient(45deg, #00bcd4, #009688);
+    }
+
+    .feature-box:nth-child(even) {
+      background: linear-gradient(45deg, #f44336, #ff5722);
+    }
+
+    .feature-box h3 {
+      color: white;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .feature-box p {
+      color: white;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  {% include "mobile/navbar.html" %}
+  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;" onclick="boxClicked()">
+    <div class="container">
+      <br><br>
+      <h1><b>WELCOME TO CELLFIX ONLINE</b></h1>
+      <br><br>
+      <p>CELLFIX ONLINE, your ultimate smartphone service center management solution! Our platform, developed using the powerful Django framework, is designed to meet the needs of three distinct user groups: Admin, Customer, and Mechanic. With a sleek and intuitive interface, we provide a comprehensive set of features tailored to enhance the experience for each user. We offer high-quality phone repairs at an affordable price. At CELLFIX ONLINE, we strive to provide a comprehensive and user-friendly platform for smartphone service center management. Join us today and experience a new level of efficiency and convenience for Admins, Customers, and Mechanics alike.</p>
+    </div>
+  </div>
+  <div class="container">
+    <h1 class="services-heading">Our Services</h1>
+    <p class="services-description">Choose from our range of smartphone repair services:</p>
+    <div class="row">
+      <!-- Create cards with Bootstrap -->
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static "images/screen.jpeg" %}" class="card-img-top" alt="Screen repair or replacement">
+          <div class="card-body">
+            <h5 class="card-title">Screen Repair or Replacement</h5>
+            <p class="card-text">This service involves fixing or replacing the cracked or broken screen of a smartphone.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static "images/battery.jpeg" %}" class="card-img-top" alt="Battery replacement">
+          <div class="card-body">
+            <h5 class="card-title">Battery Replacement</h5>
+            <p class="card-text">This service involves replacing the old or damaged battery of a smartphone with a new one.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static "images/chargingport.jpeg" %}" class="card-img-top" alt="Charging port repair">
+          <div class="card-body">
+            <h5 class="card-title">Charging Port Repair</h5>
+            <p class="card-text">This service involves fixing the charging port of a smartphone if it is not charging properly or is loose.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static "images/waterdamage.jpeg" %}" class="card-img-top" alt="Water damage repair">
+          <div class="card-body">
+            <h5 class="card-title">Water Damage Repair</h5>
+            <p class="card-text">This service involves fixing a smartphone that has been damaged by water or any other liquid.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static "images/camerareplacement.jpeg" %}" class="card-img-top" alt="Camera repair or replacement">
+          <div class="card-body">
+            <h5 class="card-title">Camera Repair or Replacement</h5>
+            <p class="card-text">This service involves fixing or replacing the camera of a smartphone if it is not working properly.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static "images/recovery.webp" %}" class="card-img-top" alt="Software issues">
+          <div class="card-body">
+            <h5 class="card-title">Software Issues</h5>
+            <p class="card-text">This service involves fixing the operating system failures.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-choose-us">
+      <h2>Why Choose Us?</h2>
+      <div class="row">
+        <!-- Feature Box 1 -->
+        <div class="col-md-4">
+          <div class="feature-box" onclick="featureBoxClicked(1)">
+            <h3>Faster and Reliable Service</h3>
+            <p>We ensure minimal downtime for our customers.</p>
+          </div>
+        </div>
+        <!-- Feature Box 2 -->
+        <div class="col-md-4">
+          <div class="feature-box" onclick="featureBoxClicked(2)">
+            <h3>Safe and Skilled Technicians</h3>
+            <p>Our technicians handle smartphone repairs with utmost care and safety.</p>
+          </div>
+        </div>
+        <!-- Feature Box 3 -->
+        <div class="col-md-4">
+          <div class="feature-box" onclick="featureBoxClicked(3)">
+            <h3>Affordable Prices</h3>
+            <p>We offer competitive and affordable prices.</p>
+          </div>
+        </div>
+        <!-- Feature Box 4 -->
+        <div class="col-md-4">
+          <div class="feature-box" onclick="featureBoxClicked(4)">
+            <h3>No Cheating or Hidden Charges</h3>
+            <p>There are no hidden charges or cheating practices.</p>
+          </div>
+        </div>
+        <!-- Feature Box 5 -->
+        <div class="col-md-4">
+          <div class="feature-box" onclick="featureBoxClicked(5)">
+            <h3>Home Delivery Service</h3>
+            <p>We save your time and effort.</p>
+          </div>
+        </div>
+        <!-- Feature Box 6 -->
+        <div class="col-md-4">
+          <div class="feature-box" onclick="featureBoxClicked(6)">
+            <h3>Original Replacements</h3>
+            <p>We ensure the best performance and longevity of your smartphone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include "mobile/customer_mechanic_cards.html" %}
+  {% include "mobile/footer.html" %}
+
+  <script>
+    function boxClicked() {
+      // Add your desired response animation here
+      console.log("Jumbotron box clicked!");
+    }
+
+    function featureBoxClicked(index) {
+      // Add your desired response animation here
+      console.log("Feature box clicked! Index: " + index);
+    }
+  </script>
+</body>
+
+</html>
